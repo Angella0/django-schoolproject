@@ -14,3 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'schoolprojects.settings')
 
 application = get_wsgi_application()
+
+#Web Server Getway Interface - we run in syncronous is blocking
+# Asynconous is non blocking
