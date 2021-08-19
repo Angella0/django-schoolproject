@@ -12,35 +12,11 @@ class TrainerRegistrationForm(forms.ModelForm):
           'last_name' : forms.TextInput(attrs={'class':'form-control'}),
           'Age' : forms.TextInput(attrs={'class':'form-control'}),
           'Gender' : forms.TextInput(attrs={'class':'form-control'}),
-          'Bio' : forms.TextInput(attrs={'class':'form-control'}),
+          # 'Bio' : forms.TextInput(attrs={'class':'form-control'}),
           'Courses' : forms.TextInput(attrs={'class':'form-control'}),
           'Email_Address' : forms.TextInput(attrs={'class':'form-control'}),
-          'Salary' : forms.TextInput(attrs={'class':'form-control'}),
+          
           'Lesson_Duration' : forms.TextInput(attrs={'class':'form-control'}),
           'phone_number' : forms.TextInput(attrs={'class':'form-control'}),
-          'phone_number' : forms.TextInput(attrs={'class':'form-control'}),
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+  
         }
