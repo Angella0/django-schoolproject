@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from.models import Trainer
 from .forms import TrainerRegistrationForm
 from django.shortcuts import render
@@ -8,6 +8,7 @@ def register_trainer(request):
        form = TrainerRegistrationForm(request.POST, request.FILES)
        if form.is_valid():
            form.save()
+           return redirect('trainer:trainer_list')
        else:
            print(form.errors)
 

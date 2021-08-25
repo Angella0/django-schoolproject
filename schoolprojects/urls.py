@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf .urls .static import static
 """schoolprojects URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -22,8 +24,12 @@ urlpatterns = [
     path('student/', include('student.urls')),
     path('trainer/', include('Trainer.urls')),
     path('courses/', include('Courses.urls')),
-    path('calender/', include('Calender.urls'))
+    path('home/', include('Home.urls')),
+    path('cal/', include('cal.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
 #All projects are kept here

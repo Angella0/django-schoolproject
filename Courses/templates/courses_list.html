@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses</title>
 </head>
 <body>
-  
-  <table>
+  <h1>
+    Courses
+  </h1>
+  <table id="calender">
     <tr>
       <th> Name</th>
       <th>Course Code</th>
@@ -18,7 +17,7 @@
       <th>Course duration</th>  
     </tr>
     <tr>
-       {% for course in Courses %}
+       {% for course in courses %}
        <td>{{course.name}}</td>
        <td>{{course.course_code}}</td>
        <td>{{course.syllabus}}</td>
@@ -30,30 +29,39 @@
        {% endfor %}
   </table>
   <style>
-    body{background: rgb(15, 14, 14);
+     body{background: white;
 }
-table{
-    width: 800px;
-    margin: auto;
-    text-align: center;
-    table-layout: fixed;
+#calender {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 10px 170px;
+  
 }
-table,tr,th,td{
-    padding: 20px;
-    color: rgb(10, 154, 190);
-    border: 1px solid rgb(6, 61, 99);
-    border-collapse: collapse;
-    font-size: 15px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
+
+#calender td, #calender th {
+  border: 1px solid purple;
+  padding: 8px;
+  margin-bottom: 20px;
 }
-td:hover{
-    background: rgb(148, 206, 253) ;
+
+#calender tr:nth-child(even){background-color: #f2f2f2;}
+
+#calender tr:hover {background-color: #ddd;}
+
+#calender th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:purple;
+  color: white;
+
 }
+
 h1{
     text-align: center;
-    color: rgb(82, 226, 226);
-    padding-top: 10%;
+    color: purple;
+    margin-bottom: 10px;
 }
   </style>  
 </body>

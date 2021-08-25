@@ -1,5 +1,5 @@
 from Courses.models import CoursesForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import Courses
 from django.shortcuts import render
 
@@ -8,6 +8,7 @@ def register_courses(request):
        form = Courses(request.POST, request.FILES)
        if form.is_valid():
            form.save()
+           return redirect('courses:course_list')
        else:
            print(form.errors)
 

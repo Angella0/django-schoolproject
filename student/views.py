@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from.models import Student
 from .forms import StudentRegistrationForm
 from django.shortcuts import render
@@ -8,6 +8,7 @@ def register_student(request):
        form = StudentRegistrationForm(request.POST, request.FILES)
        if form.is_valid():
            form.save()
+           return redirect('student:student_list')
        else:
            print(form.errors)
 

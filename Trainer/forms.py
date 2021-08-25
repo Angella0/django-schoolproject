@@ -10,13 +10,13 @@ class TrainerRegistrationForm(forms.ModelForm):
         widgets ={
           'first_name' : forms.TextInput(attrs={'class':'form-control'}),
           'last_name' : forms.TextInput(attrs={'class':'form-control'}),
-          'Age' : forms.TextInput(attrs={'class':'form-control'}),
-          'Gender' : forms.TextInput(attrs={'class':'form-control'}),
+          'age' : forms.TextInput(attrs={'class':'form-control'}),
+          'gender' : forms.TextInput(attrs={'class':'form-control'}),
           # 'Bio' : forms.TextInput(attrs={'class':'form-control'}),
-          'Courses' : forms.TextInput(attrs={'class':'form-control'}),
-          'Email_Address' : forms.TextInput(attrs={'class':'form-control'}),
-          
-          'Lesson_Duration' : forms.TextInput(attrs={'class':'form-control'}),
+          'courses' : forms.TextInput(attrs={'class':'form-control'}),
+          'email_address' : forms.TextInput(attrs={'class':'form-control'}),
+          # 'cv' : forms.TextInput(attrs={'class':'form-control'}),
+          'lesson_duration' : forms.TextInput(attrs={'class':'form-control'}),
           'phone_number' : forms.TextInput(attrs={'class':'form-control'}),
   
         }

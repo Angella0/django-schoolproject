@@ -7,14 +7,14 @@ class Student(models.Model):
     last_name = models.CharField(max_length=12, null = True)
     roll_number=models.PositiveSmallIntegerField( null = True)
     student_id=models.CharField(max_length=15, null = True)
-    course_name=models.CharField(max_length=30, null = True)
+    image = models.ImageField(upload_to='images/', blank=True, null=True, )
     city_name=models.CharField(max_length=15, null=True)
     age = models.PositiveSmallIntegerField( null = True)
     date_of_birth = models.DateField(max_length=20, null = True)
     email_address = models.EmailField( null = True)
     date_of_enrollment=models.DateField( null = True)
     medical_report=models.FileField(upload_to='documents/', null = True)
-    # image = models.ImageField(upload_to='images/')
+
 
 
     GENDER_CHOICES=(
