@@ -12,4 +12,8 @@ class Trainer(models.Model):
     phone_number = models.CharField(max_length=15,blank=True, null = True)
     lesson_duration = models.PositiveSmallIntegerField(blank=True, null = True)
 
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+
     

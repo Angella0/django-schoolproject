@@ -10,6 +10,8 @@
   <h1> Trainer's Records</h1>
   <table id="calender">
     <tr>
+      <th>Profile</th>
+      <th>Edit Profile</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Age</th> 
@@ -23,6 +25,14 @@
     </tr>
     <tr>
        {% for trainer in trainers %}
+       <td>
+        <a href="{ % url 'trainer_profile' id = student.id % }">
+          Profile</a>
+      </td>
+      <td>
+        <a href="{ % url 'trainer_edit' id = student.id % }">
+          Edit Profile</a>
+      </td>
        <td>{{trainer.first_name}}</td>
        <td>{{trainer.last_name}}</td>
        <td>{{trainer.age}}</td>

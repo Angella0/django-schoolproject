@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Courses',
     'cal',
     'Home',
+    'core',
 ]
 
 MIDDLEWARE = [

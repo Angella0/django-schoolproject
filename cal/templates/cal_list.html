@@ -9,11 +9,21 @@
 <body>
     <h1> CodeHive Calender</h1>
     {% block content %}
+    <div class="clearfix">
+      <a class="btn btn-info left" href="{ % url 'cal:calendar' % }?{{ prev_month }}"> Previous Month </a>
+      <a class="btn btn-info right" href="{ % url 'cal:calendar' % }?{{ next_month }}"> Next Month </a>
+    </div>
     {{ calendar }}
     {% endblock %}
     
     <style>
     
+    div{
+      text-align: right;
+      margin-right: 150px;
+      margin-top: 10px;
+      
+    }
     h1{
         text-align: center;
         color: purple;
@@ -25,27 +35,31 @@
     }
     
     .calendar tr, .calendar td {
-      border: 1px solid purple;
+      border: 2px solid plum;
     }
     
     .calendar th {
       padding: 10px;
       text-align: center;
-      font-size: 18px;
+      font-size: 38px;
+      color: purple;
     }
     
     .calendar td {
       width: 70px;
       height: 50px;
       padding: 20px 0px 0px 5px;
+      /* color: purple; */
     }
     
     .month {
-      font-size: 25px;
+      font-size: 55px;
+      color: purple;
     }
     
     .date {
       font-size: 16px;
+      color: purple;
     }
     
     ul {
@@ -55,6 +69,11 @@
     
     a {
       color:purple;
+      font-size: 20px;
+      /* text-decoration: none; */
+    }
+    body{
+      background-color:ghostwhite;
     }
     </style> 
 </body>

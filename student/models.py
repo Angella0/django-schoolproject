@@ -33,4 +33,5 @@ class Student(models.Model):
     )
     languages  = models.CharField(max_length=6, choices=LANGUAGE_CHOICES, null=True)
 
-
+    def full_name(self):
+         return f"{self.first_name} {self.last_name}"

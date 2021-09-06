@@ -22,4 +22,22 @@ def student_list(request):
         "students":students
     })
 
+def student_profile(request, id):
+    student = Student.objects.get(id=id)
+    return render(request, "student_profile.html", {"student":student})
+
+def edit_student(request, id):
+    student = Student.objects.get(id=id)
+    if request.method=="POST":
+        form = StudentRegistrationForm(request.POST, instance=student)
+        if form.is_valid():
+            form.save()
+            return redirect("student_profile", id = student.id)
+    else:
+         form = StudentRegistrationForm(instance=student)
+         return render(request, "edit_student.html", {"form":form})
+
+
+       
+
 # Create your views here.
