@@ -23,8 +23,8 @@ def student_list(request):
     })
 
 def student_profile(request, id):
-    student = Student.objects.get(id=id)
-    return render(request, "student_profile.html", {"student":student})
+    students = Student.objects.get(id=id)
+    return render(request, "student_profile.html", {"students":students})
 
 def edit_student(request, id):
     student = Student.objects.get(id=id)

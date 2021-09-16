@@ -26,6 +26,7 @@ urlpatterns = [
     path('trainer/', include('Trainer.urls')),
     path('courses/', include('Courses.urls')),
     path('cal/', include('cal.urls')),
+    path('api/', include('api.urls')),
 ]
 
 if settings.DEBUG:

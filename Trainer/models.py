@@ -9,7 +9,6 @@ class Trainer(models.Model):
     bio = models.TextField(blank=True, null = True)
     cv = models.FileField(upload_to='documents/', null = True)
     email_address = models.EmailField(blank=True, null = True)
-    phone_number = models.CharField(max_length=15,blank=True, null = True)
     lesson_duration = models.PositiveSmallIntegerField(blank=True, null = True)
 
     def full_name(self):

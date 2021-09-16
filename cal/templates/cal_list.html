@@ -7,26 +7,45 @@
     <title>Calender</title>
 </head>
 <body>
-    <h1> CodeHive Calender</h1>
+  <h2>
+    Welcome To codeHive 2022
+  </h2>
+  <div class="topnav">
+    <a style="margin-top:10%;" href="{% url 'cal:event_form' %}"> EVENTS</a>
+    <a style="margin-top:10%;" href="{% url 'courses:register_courses' %}"> COURSES</a>
+    <a style="margin-top:10%;" href="{% url 'trainer:register_trainer' %}"> TRAINER </a>
+    <a style="margin-top:10%;" href="{% url 'student:register_student' %}"> STUDENT</a>  
+  
+        </div>
+    <h1> codeHive Calender</h1>
     {% block content %}
+    <div class="heading">
     <div class="clearfix">
       <a class="btn btn-info left" href="{ % url 'cal:calendar' % }?{{ prev_month }}"> Previous Month </a>
       <a class="btn btn-info right" href="{ % url 'cal:calendar' % }?{{ next_month }}"> Next Month </a>
     </div>
     {{ calendar }}
     {% endblock %}
-    
+  </div>
     <style>
     
     div{
       text-align: right;
       margin-right: 150px;
-      margin-top: 10px;
+      margin-top: 40px;
+      margin-left: 30px;
       
     }
     h1{
         text-align: center;
         color: purple;
+        margin-bottom: 40px;
+    }
+    .heading{
+      border-radius: 10px;
+      box-shadow: 20px;
+      background-color:white;
+      margin-left: 100px;
     }
     .calendar {
       width:78%;
@@ -35,13 +54,13 @@
     }
     
     .calendar tr, .calendar td {
-      border: 2px solid plum;
+      border: 1px solid plum;
     }
     
     .calendar th {
       padding: 10px;
       text-align: center;
-      font-size: 38px;
+      font-size: 28px;
       color: purple;
     }
     
@@ -51,6 +70,14 @@
       padding: 20px 0px 0px 5px;
       /* color: purple; */
     }
+    h2{
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+    background-color: purple;
+    
+    
+}
     
     .month {
       font-size: 55px;
@@ -70,10 +97,12 @@
     a {
       color:purple;
       font-size: 20px;
-      /* text-decoration: none; */
+      text-decoration: none;
+      padding: 10px;
+      text-align: right;
     }
     body{
-      background-color:ghostwhite;
+      background-color:whitesmoke;
     }
     </style> 
 </body>

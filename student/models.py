@@ -13,7 +13,7 @@ class Student(models.Model):
     date_of_birth = models.DateField(max_length=20, null = True)
     email_address = models.EmailField( null = True)
     date_of_enrollment=models.DateField( null = True)
-    medical_report=models.FileField(upload_to='documents/', null = True)
+  
 
 
 
@@ -34,4 +34,4 @@ class Student(models.Model):
     languages  = models.CharField(max_length=6, choices=LANGUAGE_CHOICES, null=True)
 
     def full_name(self):
-         return f"{self.first_name} {self.last_name}"
+        return f"{self.first_name} {self.last_name}"

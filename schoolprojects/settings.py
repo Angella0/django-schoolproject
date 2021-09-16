@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'cal',
     'Home',
     'core',
+    'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
