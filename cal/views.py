@@ -36,6 +36,7 @@ def next_month(d):
     next_month = last + timedelta(days=1)
     month = 'month=' + str(next_month.year) + '-' + str(next_month.month)
     return month
+    
 def get_date(req_month):
     if req_month:
         year, month = (int(x) for x in req_month.split('-'))
