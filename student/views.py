@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from.models import Student
 from .forms import StudentRegistrationForm
 from django.shortcuts import render
+from django .urls import reverse
 
 def register_student(request):
     if request.method == "POST":
